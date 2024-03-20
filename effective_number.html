@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有效政黨數計算</title>
+</head>
+<body>
+    <h1>有效政黨數計算</h1>
+    <label for="seats">請輸入每個政黨的席次數，數字之間請用空格分隔：</label>
+    <input type="text" id="seats" name="seats">
+    <button onclick="calculateEffectiveNumber()">計算</button>
+    <button onclick="resetCalculation()">重新計算</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateEffectiveNumber() {
+            const input = document.getElementById('seats').value;
+            const seatsList = input.split(' ').map(Number);
+            const totalSeats = seatsList.reduce((a, b) => a + b, 0);
+            if (totalSeats === 0) {
+                alert('總席次數不能為0。');
+                return;
+            }
+            const seatShares = seatsList.map(seat => seat / totalSeats);
+            const squaresOfShares = seatShares.map(share => share ** 2);
+            const sumOfSquares = squaresOfShares.reduce((a, b) => a + b, 0);
+            const effectiveNumber = 1 / sumOfSquares;
+
+            document.getElementById('result').innerText = `有效政黨數: ${effectiveNumber.toFixed(2)}`;
+        }
+
+        function resetCalculation() {
+            document.getElementById('seats').value = ''; // 清空輸入框
+            document.getElementById('result').innerText = ''; // 清空結果顯示
+        }
+    </script>
+</body>
+</html>
