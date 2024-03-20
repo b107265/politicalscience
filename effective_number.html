@@ -12,7 +12,7 @@
     <button onclick="calculateEffectiveNumber()">計算</button>
     <button onclick="resetCalculation()">重新計算</button>
     <p id="result"></p>
-
+    
     <script>
         function calculateEffectiveNumber() {
             const input = document.getElementById('seats').value;
@@ -31,9 +31,14 @@
         }
 
         function resetCalculation() {
-            document.getElementById('seats').value = ''; // 清空輸入框
-            document.getElementById('result').innerText = ''; // 清空結果顯示
+            document.getElementById('seats').value = ''; // Clear the input field
+            document.getElementById('result').innerText = ''; // Clear the result display
         }
     </script>
+    
+    <!-- 将「點閱次數」和计数器移至页面底部 -->
+    <p>點閱次數:</p>
+    <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
 </body>
 </html>
