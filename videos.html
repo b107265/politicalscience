@@ -6,17 +6,27 @@
     <title>推薦YouTube頻道</title>
     <style>
         body {
-            text-align: center; /* 將文字對齊設為置中 */
+            text-align: center; /* 使网页内容居中显示 */
         }
         .video-container {
-            margin: 0 auto; /* 對於影片容器使用自動邊距以實現水平居中 */
-            width: 560px; /* 設定一個固定寬度，可以根據實際需要調整 */
+            margin: 20px auto; /* 让视频容器居中 */
+            width: 560px; /* 视频容器的宽度 */
+        }
+        .access-counter {
+            position: fixed; /* 使用固定定位 */
+            bottom: 20px; /* 距离底部20px */
+            right: 20px; /* 距离右侧20px */
+            text-align: right; /* 文本对齐方式为右对齐 */
+        }
+        .counter-label {
+            display: block; /* 将标签设为块级元素，确保它独占一行 */
         }
     </style>
 </head>
 <body>
     <h1>推薦YouTube頻道</h1>
     
+    <!-- 影片區塊 -->
     <div class="video-container">
         <h2>Taiwan Talks</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BaMeh9tBWmA?start=49" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -31,6 +41,19 @@
         <h2>中間觀點 - 翁P聊時事</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/KwRPnsdq_X0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    
+
+    <!-- 點閱次數計數器 -->
+    <div class="access-counter">
+        <span class="counter-label">點閱次數</span>
+        <nobr>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1711117212/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1711117212/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                </tr></tbody>
+            </table>
+        </nobr>
+    </div>
+
 </body>
 </html>
