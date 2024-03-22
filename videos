@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推薦YouTube頻道</title>
+</head>
+<body>
+    <h1>推薦YouTube頻道</h1>
+    
+    <h2>Taiwan Talks</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BaMeh9tBWmA?start=49" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <h2>轉角國際</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vcZ79KcVJws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <h2>中間觀點 - 翁P聊時事</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KwRPnsdq_X0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>
