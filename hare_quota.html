@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政治學公式應用程式</title>
+</head>
+<body>
+    <h1>嘿爾最大餘數法席次計算</h1>
+    
+    <div>
+        <label for="totalVotes">總票數(V): </label>
+        <input type="number" id="totalVotes" name="totalVotes">
+    </div>
+    <div>
+        <label for="seats">席位數(M): </label>
+        <input type="number" id="seats" name="seats">
+    </div>
+    <div>
+        <label for="partyVotes">各黨票數(以空格分隔): </label>
+        <input type="text" id="partyVotes" name="partyVotes">
+    </div>
+    <button onclick="calculateSeats()">計算席次</button>
+    <button onclick="resetForm()">重新計算</button>
+
+    <h2>計算結果：</h2>
+    <div id="result"></div>
+    
+    <div style="margin-top: 20px;">點閱次數：</div>
+    <!--カウンター画像からは配布サイトへリンクが設定されています。また、誤作動、誤表示の原因となりますのでコードの改変、改行は行わないで下さい。このコメント部分は削除して頂いても結構です。-->
+    <nobr>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://www.stylemap.co.jp/">
+                            <img src="https://www.f-counter.net/ani1/63/1711219231/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://www.stylemap.co.jp/">
+                            <img src="https://www.f-counter.net/ani2/63/1711219231/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </nobr>
+
+    <script>
+        function calculateSeats() {
+            const V = parseInt(document.getElementById('totalVotes').value);
+            const M = parseInt(document.getElementById('seats').value);
+            const votes = document.getElementById('partyVotes').value.split(' ').map(Number);
+            const quota = V / M;
+            let seats = new Array(votes.length).fill(0);
+            let totalSeats = 0;
+
+            // 初步分配
+            for (let i = 0; i < votes.length; i++) {
+                seats[i] = Math.floor(votes[i] / quota);
+                totalSeats += seats[i];
+            }
+
+            // 分配剩餘席位
+            let remainingSeats = M - totalSeats;
+            while (remainingSeats > 0) {
+                let remainders = votes.map((vote, index) => vote / quota - seats[index]);
+                let maxIndex = remainders.indexOf(Math.max(...remainders));
+                seats[maxIndex]++;
+                remainingSeats--;
+            }
+
+            document.getElementById('result').innerHTML = `各黨席次分配：${seats.join(', ')}。<br>嘿爾基數(Q)：${quota.toFixed(2)}`;
+        }
+
+        function resetForm() {
+            document.getElementById('totalVotes').value = '';
+            document.getElementById('seats').value = '';
+            document.getElementById('partyVotes').value = '';
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
