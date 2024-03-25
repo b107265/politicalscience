@@ -5,62 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有效政黨數計算</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            background-color: #f4e9d8;
-            font-family: 'Garamond', serif;
-            color: #5a4638;
+            background-color: #232323;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             text-align: center;
+            overflow-x: hidden;
         }
         h1, p, label {
             font-size: 24px;
+            color: #FFD700;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         input[type="text"], button {
-            font-size: 16px;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid #5a4638;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #6495ED;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
             border-radius: 5px;
-            color: #5a4638;
-        }
-        button {
-            background-color: #dec8b0;
-            cursor: pointer;
-            margin-right: 10px; /* 在按鈕之間增加空間 */
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         button:hover {
-            background-color: #bba189;
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .access-counter {
-            position: fixed; /* 使用固定定位 */
-            bottom: 20px; /* 距離底部20px */
-            right: 20px; /* 距離右側20px */
-            text-align: right; /* 文本對齊方式為右對齊 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
         }
         .counter-label {
-            display: block; /* 將標籤設為塊級元素，確保它獨佔一行 */
-            font-size: 16px; /* 調整字體大小 */
-            margin-bottom: 5px; /* 標籤與計數器圖像之間的間距 */
+            display: block;
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 5px;
         }
         .home-link {
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 20px;
         }
         .home-link a {
-            text-decoration: none; /* 去除下劃線 */
-            color: #5a4638; /* 鏈接顏色 */
-            background-color: #dec8b0; /* 背景顏色 */
-            padding: 5px 10px; /* 內邊距 */
-            border-radius: 5px; /* 邊框圓角 */
-            transition: background-color 0.3s, color 0.3s; /* 過渡效果 */
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #6495ED;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         .home-link a:hover {
-            background-color: #bba189; /* 滑鼠懸停時的背景顏色 */
-            color: #f4e9d8; /* 滑鼠懸停時的文字顏色 */
+            background-color: #FF69B4;
         }
     </style>
 </head>
