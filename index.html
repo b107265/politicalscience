@@ -5,56 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>政治學捷徑</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            background-color: #f4e9d8;
-            font-family: 'Garamond', serif;
-            color: #5a4638;
+            background-color: #232323;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             text-align: center;
+            overflow-x: hidden;
         }
         h1, h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         p, a {
-            font-size: 20px;
-            color: #5a4638; /* Adjusted to match the primary text color */
+            font-size: 18px;
+            color: #ffffff;
             text-decoration: none;
+            background-color: #6495ED;
             padding: 10px 20px;
-            display: inline-block;
             margin: 10px;
-            background-color: #dec8b0;
-            border: 2px solid #5a4638;
+            display: inline-block;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
         a:hover {
-            color: #f4e9d8;
-            background-color: #5a4638;
-            border-color: #dec8b0;
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .content {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
         .philosopher {
-            background-color: #dec8b0;
-            color: #000;
-            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 20px;
             margin: 20px auto;
-            width: 90%;
-            border-radius: 10px;
+            width: 80%;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        .philosopher:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
         img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 5px;
-            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #FFD700;
         }
         .description {
             text-align: left;
-            padding: 0 20px;
         }
     </style>
 </head>
@@ -79,8 +90,6 @@
                 <p>伏爾泰是啟蒙時代最著名的批判性思想家之一，倡導理性、自由和對抗專制的思想。</p>
             </div>
         </div>
-
-        <!-- 更多政治學家的介紹可以在此添加 -->
     </div>
 </body>
 </html>
