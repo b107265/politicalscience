@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>政治學公式應用程式</title>
+    <style>
+        body {
+            background-color: #f4e9d8;
+            font-family: 'Garamond', serif;
+            color: #5a4638;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2, label {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="number"], input[type="text"], button {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #5a4638;
+            border-radius: 5px;
+            color: #5a4638;
+        }
+        button {
+            background-color: #dec8b0;
+            cursor: pointer;
+            margin-right: 10px; /* Adds space between the buttons */
+        }
+        button:hover {
+            background-color: #bba189;
+        }
+        .access-counter {
+            position: fixed; /* Use fixed positioning */
+            bottom: 20px; /* 20px from the bottom */
+            right: 20px; /* 20px from the right side */
+            text-align: right; /* Text aligned to the right */
+        }
+        .counter-label {
+            display: block; /* Display the label as a block element to ensure it occupies its own line */
+            font-size: 16px; /* Adjust the font size as necessary */
+            margin-bottom: 5px; /* Spacing between the label and the counter images */
+        }
+    </style>
 </head>
 <body>
     <h1>嘿爾最大餘數法席次計算</h1>
-    
+
     <div>
         <label for="totalVotes">總票數(V): </label>
         <input type="number" id="totalVotes" name="totalVotes">
@@ -25,27 +66,20 @@
 
     <h2>計算結果：</h2>
     <div id="result"></div>
-    
-    <div style="margin-top: 20px;">點閱次數：</div>
-    <!--カウンター画像からは配布サイトへリンクが設定されています。また、誤作動、誤表示の原因となりますのでコードの改変、改行は行わないで下さい。このコメント部分は削除して頂いても結構です。-->
-    <nobr>
-        <table border="0" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="https://www.stylemap.co.jp/">
-                            <img src="https://www.f-counter.net/ani1/63/1711219231/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="https://www.stylemap.co.jp/">
-                            <img src="https://www.f-counter.net/ani2/63/1711219231/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom">
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </nobr>
+
+    <div class="access-counter">
+        <span class="counter-label">點閱次數：</span>
+        <nobr>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1711219231/" alt="Access Counter" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1711219231/" alt="Access Counter" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nobr>
+    </div>
 
     <script>
         function calculateSeats() {
