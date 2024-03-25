@@ -28,27 +28,39 @@
         button {
             background-color: #dec8b0;
             cursor: pointer;
-            margin-right: 10px; /* Adds space between the buttons */
+            margin-right: 10px; /* 在按鈕之間增加空間 */
         }
         button:hover {
             background-color: #bba189;
         }
         .access-counter {
             position: fixed; /* 使用固定定位 */
-            bottom: 20px; /* 距离底部20px */
-            right: 20px; /* 距离右侧20px */
-            text-align: right; /* 文本对齐方式为右对齐 */
+            bottom: 20px; /* 距離底部20px */
+            right: 20px; /* 距離右側20px */
+            text-align: right; /* 文本對齊方式為右對齊 */
         }
         .counter-label {
-            display: block; /* 将标签设为块级元素，确保它独占一行 */
-            font-size: 16px; /* Adjust the font size as needed */
-            margin-bottom: 5px; /* Spacing between the label and the counter images */
+            display: block; /* 將標籤設為塊級元素，確保它獨佔一行 */
+            font-size: 16px; /* 調整字體大小 */
+            margin-bottom: 5px; /* 標籤與計數器圖像之間的間距 */
         }
         .home-link {
             position: absolute;
             top: 20px;
             left: 20px;
             font-size: 20px;
+        }
+        .home-link a {
+            text-decoration: none; /* 去除下劃線 */
+            color: #5a4638; /* 鏈接顏色 */
+            background-color: #dec8b0; /* 背景顏色 */
+            padding: 5px 10px; /* 內邊距 */
+            border-radius: 5px; /* 邊框圓角 */
+            transition: background-color 0.3s, color 0.3s; /* 過渡效果 */
+        }
+        .home-link a:hover {
+            background-color: #bba189; /* 滑鼠懸停時的背景顏色 */
+            color: #f4e9d8; /* 滑鼠懸停時的文字顏色 */
         }
     </style>
 </head>
