@@ -5,39 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>政治學公式應用程式</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            background-color: #f4e9d8;
-            font-family: 'Garamond', serif;
-            color: #5a4638;
+            background-color: #232323;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             text-align: center;
+            overflow-x: hidden;
         }
         h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px; /* 保持原h1的margin-bottom設定 */
         }
         a {
-            display: inline-block; /* 改為內聯塊顯示，方便設置間距 */
-            font-size: 20px;
-            color: #5a4638;
-            background-color: #dec8b0;
-            padding: 10px 20px; /* 調整內邊距 */
-            margin: 10px 0; /* 添加上下邊距以避免重疊 */
-            border-radius: 5px;
+            font-size: 18px;
+            color: #ffffff;
             text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
+            background-color: #6495ED;
+            padding: 10px 20px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
         }
         a:hover {
-            background-color: #bba189;
-            color: #f4e9d8;
-            text-decoration: none;
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .home-link {
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 20px;
+            font-size: 18px; /* 調整為符合其他<a>元素的字體大小 */
+            color: #ffffff; /* 調整顏色以適應新背景 */
+            /* 其他樣式继承自a元素的樣式，不需重复设置 */
         }
     </style>
 </head>
