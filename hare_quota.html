@@ -5,59 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>政治學公式應用程式</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            background-color: #f4e9d8;
-            font-family: 'Garamond', serif;
-            color: #5a4638;
+            background-color: #232323;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             text-align: center;
+            overflow-x: hidden;
         }
         h1, h2, label {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        input[type="number"], input[type="text"], button {
-            font-size: 16px;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid #5a4638;
+        input[type="number"], input[type="text"], button, .home-button {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #6495ED;
+            padding: 10px 20px;
+            margin: 10px;
+            display: inline-block;
+            border: none;
             border-radius: 5px;
-            color: #5a4638;
+            transition: transform 0.3s ease;
         }
-        button {
-            background-color: #dec8b0;
-            cursor: pointer;
-            margin-right: 10px; /* Adds space between the buttons */
-        }
-        button:hover {
-            background-color: #bba189;
+        button:hover, .home-button:hover {
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .access-counter {
-            position: fixed; /* Use fixed positioning */
-            bottom: 20px; /* 20px from the bottom */
-            right: 20px; /* 20px from the right side */
-            text-align: right; /* Text aligned to the right */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
         }
         .counter-label {
-            display: block; /* Display the label as a block element to ensure it occupies its own line */
-            font-size: 16px; /* Adjust the font size as necessary */
-            margin-bottom: 5px; /* Spacing between the label and the counter images */
-        }
-        .home-button {
-            position: absolute; /* 定位方式 */
-            top: 20px; /* 與頂部的距離 */
-            left: 20px; /* 與左側的距離 */
-            padding: 10px 20px; /* 內部填充 */
-            font-size: 16px; /* 字體大小 */
-            text-decoration: none; /* 去除下劃線 */
-            color: #5a4638; /* 文本顏色 */
-            background-color: #dec8b0; /* 背景顏色 */
-            border: none; /* 去除邊框 */
-            border-radius: 5px; /* 圓角邊框 */
-        }
-        .home-button:hover {
-            background-color: #bba189; /* 鼠標懸停時的背景顏色 */
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -106,13 +96,11 @@
             let seats = new Array(votes.length).fill(0);
             let totalSeats = 0;
 
-            // 初步分配
             for (let i = 0; i < votes.length; i++) {
                 seats[i] = Math.floor(votes[i] / quota);
                 totalSeats += seats[i];
             }
 
-            // 分配剩餘席位
             let remainingSeats = M - totalSeats;
             while (remainingSeats > 0) {
                 let remainders = votes.map((vote, index) => vote / quota - seats[index]);
