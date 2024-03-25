@@ -18,18 +18,26 @@
             margin-bottom: 20px;
         }
         a {
+            display: inline-block; /* 改為內聯塊顯示，方便設置間距 */
             font-size: 20px;
-            color: #3e72a7;
+            color: #5a4638;
+            background-color: #dec8b0;
+            padding: 10px 20px; /* 調整內邊距 */
+            margin: 10px 0; /* 添加上下邊距以避免重疊 */
+            border-radius: 5px;
             text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
         }
         a:hover {
-            text-decoration: underline;
+            background-color: #bba189;
+            color: #f4e9d8;
+            text-decoration: none;
         }
         .home-link {
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 16px;
+            font-size: 20px;
         }
     </style>
 </head>
