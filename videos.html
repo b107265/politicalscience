@@ -6,20 +6,38 @@
     <title>推薦YouTube頻道</title>
     <style>
         body {
-            text-align: center; /* 使网页内容居中显示 */
+            background-color: #f4e9d8;
+            font-family: 'Garamond', serif;
+            color: #5a4638;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
         }
         .video-container {
-            margin: 20px auto; /* 让视频容器居中 */
-            width: 560px; /* 视频容器的宽度 */
+            margin: 20px auto;
+            width: 560px; /* Adjust if necessary for responsive design */
+        }
+        a, .counter-label {
+            font-size: 20px;
+            color: #3e72a7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .access-counter {
-            position: fixed; /* 使用固定定位 */
-            bottom: 20px; /* 距离底部20px */
-            right: 20px; /* 距离右侧20px */
-            text-align: right; /* 文本对齐方式为右对齐 */
-        }
-        .counter-label {
-            display: block; /* 将标签设为块级元素，确保它独占一行 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            background-color: #dec8b0; /* Added for consistency */
+            padding: 10px;
+            border-radius: 10px;
+            color: #000;
         }
     </style>
 </head>
