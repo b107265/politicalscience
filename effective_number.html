@@ -4,6 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有效政黨數計算</title>
+    <style>
+        body {
+            background-color: #f4e9d8;
+            font-family: 'Garamond', serif;
+            color: #5a4638;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, p, label {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], button {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #5a4638;
+            border-radius: 5px;
+            color: #5a4638;
+        }
+        button {
+            background-color: #dec8b0;
+            cursor: pointer;
+            margin-right: 10px; /* Adds space between the buttons */
+        }
+        button:hover {
+            background-color: #bba189;
+        }
+        .access-counter {
+            position: fixed; /* 使用固定定位 */
+            bottom: 20px; /* 距离底部20px */
+            right: 20px; /* 距离右侧20px */
+            text-align: right; /* 文本对齐方式为右对齐 */
+        }
+        .counter-label {
+            display: block; /* 将标签设为块级元素，确保它独占一行 */
+            font-size: 16px; /* Adjust the font size as needed */
+            margin-bottom: 5px; /* Spacing between the label and the counter images */
+        }
+    </style>
 </head>
 <body>
     <h1>有效政黨數計算</h1>
@@ -31,14 +72,23 @@
         }
 
         function resetCalculation() {
-            document.getElementById('seats').value = ''; // Clear the input field
-            document.getElementById('result').innerText = ''; // Clear the result display
+            document.getElementById('seats').value = '';
+            document.getElementById('result').innerText = '';
         }
     </script>
     
-    <!-- 将「點閱次數」和计数器移至页面底部 -->
-    <p>點閱次數:</p>
-    <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
-    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
+    <div class="access-counter">
+        <span class="counter-label">點閱次數:</span>
+        <nobr>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nobr>
+    </div>
 </body>
 </html>
