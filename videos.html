@@ -5,70 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>推薦YouTube頻道</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
         body {
-            background-color: #232323;
-            font-family: 'Roboto', sans-serif;
-            color: #ffffff;
+            background-color: #f4e9d8;
+            font-family: 'Garamond', serif;
+            color: #5a4638;
             margin: 0;
             padding: 20px;
             text-align: center;
-            overflow-x: hidden;
         }
         h1, h2 {
-            font-size: 2.5em;
-            color: #FFD700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        a, .counter-label {
-            font-size: 18px;
-            color: #ffffff;
-            text-decoration: none;
-            background-color: #6495ED;
-            padding: 10px 20px;
-            margin: 10px;
-            display: inline-block;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        a:hover, .home-link:hover {
-            transform: scale(1.1);
-            background-color: #FF69B4;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
         .video-container {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #FFFFFF;
-            padding: 20px;
             margin: 20px auto;
-            width: 80%;
-            border-radius: 15px;
-            transition: all 0.3s ease;
+            width: 560px; /* Adjust if necessary for responsive design */
         }
-        .video-container:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        a, .counter-label {
+            font-size: 20px;
+            color: #5a4638; /* Adjusted to match the primary text color */
+            text-decoration: none;
         }
-        iframe {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 5px solid #FFD700;
+        a:hover {
+            color: #dec8b0; /* Lighter shade for hover effect */
+            text-decoration: underline;
         }
         .access-counter {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            background-color: #dec8b0; /* Added for consistency */
             padding: 10px;
             border-radius: 10px;
-            display: inline-block;
-            margin: 20px 0;
-            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+            color: #000;
         }
         .home-link {
-            display: inline-block;
-            position: relative;
-            text-decoration: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            background-color: #dec8b0; /* Adjusted to fit the overall design */
+            color: #5a4638; /* Adjusted to match the main text color */
+            padding: 10px 20px; /* Added padding */
+            border-radius: 5px; /* Rounded corners for a softer look */
+            text-decoration: none; /* Remove underline from links */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Added a subtle shadow for depth */
+        }
+        .home-link:hover {
+            background-color: #bba189; /* Darker shade on hover */
+            color: #f4e9d8; /* Light text color on hover */
         }
     </style>
 </head>
@@ -94,9 +80,15 @@
 
     <!-- 點閱次數計數器 -->
     <div class="access-counter">
-        <span class="counter-label">點閱次數：</span>
-        <!-- 將計數器數字整合顯示 -->
-        <a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani0/63/1711117212/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a>
+        <span class="counter-label">點閱次數</span>
+        <nobr>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1711117212/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                    <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1711117212/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                </tr></tbody>
+            </table>
+        </nobr>
     </div>
 
 </body>
