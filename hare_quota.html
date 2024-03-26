@@ -22,7 +22,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        input[type="number"], input[type="text"], button, .home-button {
+        input[type="number"], input[type="text"], button {
             font-size: 18px;
             color: #ffffff;
             text-decoration: none;
@@ -34,7 +34,7 @@
             border-radius: 5px;
             transition: transform 0.3s ease;
         }
-        button:hover, .home-button:hover {
+        button:hover {
             transform: scale(1.1);
             background-color: #FF69B4;
         }
@@ -42,22 +42,46 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            text-align: right;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .access-counter:hover {
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .counter-label {
+            display: block;
             font-size: 16px;
             color: #ffffff;
             margin-bottom: 5px;
         }
-        .home-button {
+        .home-link {
             position: fixed;
             top: 20px;
             left: 20px;
         }
+        .home-link a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #6495ED;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: inline-block; /* 加入此属性以确保变换效果适用 */
+        }
+        .home-link a:hover {
+            transform: scale(1.1);
+            background-color: #FF69B4;
+        }
     </style>
 </head>
 <body>
-    <a href="https://politicalscienceshortcut.vercel.app/" class="home-button">回到首頁</a>
+    <div class="home-link"><a href="https://politicalscienceshortcut.vercel.app/">回到首頁</a></div>
     <h1>嘿爾最大餘數法席次計算</h1>
 
     <div>
@@ -84,8 +108,8 @@
             <table border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
-                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1711219231/" alt="Access Counter" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
-                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1711219231/" alt="Access Counter" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
+                        <td><a href="https://www.stylemap.co.jp/"><img src="https://www.f-counter.net/ani2/63/1710906095/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:none; vertical-align:bottom;"></a></td>
                     </tr>
                 </tbody>
             </table>
