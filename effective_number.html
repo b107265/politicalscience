@@ -41,7 +41,16 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            text-align: right;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .access-counter:hover {
+            transform: scale(1.1);
+            background-color: #FF69B4;
         }
         .counter-label {
             display: block;
@@ -50,7 +59,7 @@
             margin-bottom: 5px;
         }
         .home-link {
-            position: absolute;
+            position: fixed;
             top: 20px;
             left: 20px;
         }
@@ -61,9 +70,10 @@
             background-color: #6495ED;
             padding: 10px 20px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .home-link a:hover {
+            transform: scale(1.1);
             background-color: #FF69B4;
         }
     </style>
