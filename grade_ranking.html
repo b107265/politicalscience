@@ -22,7 +22,14 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        p, a, button {
+        p {
+            font-size: 16px; /* 修改字體大小 */
+            color: #ffffff; /* 修改字體顏色 */
+            text-align: left; /* 左對齊 */
+            margin-top: 10px; /* 調整上方間距 */
+            margin-bottom: 10px; /* 調整下方間距 */
+        }
+        a, button {
             font-size: 18px;
             color: #ffffff;
             text-decoration: none;
@@ -82,6 +89,7 @@
     <div class="home-link"><a href="https://politicalscienceshortcut.vercel.app/">回到首頁</a></div>
     <div class="content">
         <h1>成績名次等級整理</h1>
+        <p>請上傳xlsx格式的Excel檔案，檔案中應包含「姓名」列與「分數」列。100-90分為A，89-80分為B，79-70分為C，69-60分為D，60分以下為F。</p>
         <input type="file" id="file-input" accept=".xlsx">
         <button onclick="handleFile()">整理</button>
         <div id="output"></div>
