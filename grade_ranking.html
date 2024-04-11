@@ -23,11 +23,11 @@
             letter-spacing: 2px;
         }
         p {
-            font-size: 16px; /* 修改字體大小 */
-            color: #ffffff; /* 修改字體顏色 */
-            text-align: left; /* 左對齊 */
-            margin-top: 10px; /* 調整上方間距 */
-            margin-bottom: 10px; /* 調整下方間距 */
+            font-size: 16px;
+            color: #ffffff;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         a, button {
             font-size: 18px;
@@ -45,12 +45,13 @@
             background-color: #FF69B4;
         }
         .content {
-            max-width: 900px; /* 調整這個值以適應您的標題寬度 */
+            max-width: 900px;
             margin: auto;
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            overflow: hidden; /* 隱藏溢出的內容 */
         }
         table {
             width: 100%;
@@ -81,6 +82,17 @@
             font-size: 18px;
             color: #ffffff;
         }
+        /* 新增的 CSS */
+        .image-container {
+            float: right; /* 圖片右浮動 */
+            margin-left: 20px; /* 增加左邊間距 */
+        }
+        .image-container img {
+            max-width: 100px; /* 圖片最大寬度 */
+            height: auto; /* 保持高度自動調整 */
+            border-radius: 5px;
+            overflow: hidden; /* 隱藏溢出的內容 */
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.0/dist/xlsx.full.min.js"></script>
@@ -89,6 +101,10 @@
     <div class="home-link"><a href="https://politicalscienceshortcut.vercel.app/">回到首頁</a></div>
     <div class="content">
         <h1>成績名次等級整理</h1>
+        <!-- 將圖片置於說明文字右邊 -->
+        <div class="image-container">
+            <img src="https://i.meee.com.tw/WecyZQx.png" alt="圖片">
+        </div>
         <p>請上傳xlsx格式的Excel檔案，檔案中應包含「姓名」列與「分數」列。100-90分為A，89-80分為B，79-70分為C，69-60分為D，60分以下為F。</p>
         <input type="file" id="file-input" accept=".xlsx">
         <button onclick="handleFile()">整理</button>
