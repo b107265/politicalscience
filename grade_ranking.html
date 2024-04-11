@@ -187,6 +187,30 @@
                     // Generate and append the new table
                     const table = generateTable(gradedData);
                     outputElement.appendChild(table);
+
+                    // 產生新的 Excel 檔案
+                    const wb = XLSX.utils.book_new();
+                    wb.Props = {
+                        Title: "成績名次等級整理結果",
+                        CreatedDate: new Date()
+                    };
+                    wb.SheetNames.push("成績名次等級");
+                    const ws = XLSX.utils.json_to_sheet(gradedData);
+                    wb.Sheets["成績名次等級"] = ws;
+
+                    // 將 Excel 檔案轉換為二進位資料
+                    const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+
+                    // 建立下載連結
+                    const blob = new Blob([wbout], { type: 'application/octet-stream' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = '成績名次等級整理結果.xlsx';
+                    a.click();
+
+                    // 釋放 URL 物件
+                    URL.revokeObjectURL(url);
                 };
 
                 reader.onerror = function (e) {
