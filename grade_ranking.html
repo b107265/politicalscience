@@ -38,7 +38,7 @@
             background-color: #FF69B4;
         }
         .content {
-            max-width: 1200px;
+            max-width: 900px; /* 調整這個值以適應您的標題寬度 */
             margin: auto;
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -67,11 +67,19 @@
             padding: 5px;
             border-radius: 5px;
         }
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 18px;
+            color: #ffffff;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.0/dist/xlsx.full.min.js"></script>
 </head>
 <body>
+    <div class="home-link"><a href="https://politicalscienceshortcut.vercel.app/">回到首頁</a></div>
     <div class="content">
         <h1>成績名次等級整理</h1>
         <input type="file" id="file-input" accept=".xlsx">
