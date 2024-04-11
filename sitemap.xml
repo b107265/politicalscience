@@ -24,5 +24,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
- <!-- 在此處添加其他頁面 -->
+ <url>
+  <loc>https://politicalscienceshortcut.vercel.app/hare_quota.html</loc>
+  <lastmod>2024-04-11</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+  <!-- 在此處添加其他頁面 -->
 </urlset>
